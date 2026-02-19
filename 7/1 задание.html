@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index и clamp приколы</title>
+    <style>
+        body {
+            font-family:Arial, sans-serif;
+            padding: 30px;
+        }
+        h1{
+            font-size: clamp(14px,5vw,60px);
+            margin-bottom: 40px
+        }
+    .container{
+        position:relative;
+        width: 400px;
+        height: 250px;
+        border: 3px solid black;
+        margin: auto;
+    }
+        .box {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.red{
+    background: red;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.blue {
+    background: blue;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+
+}
+.green {
+    background: green;
+    top: 10px;
+    left: 130px;
+    z-index: 3;
+}
+    </style>
+</head>
+<body>
+    <h1>Пример z-index'а и clamp'a</h1>
+    <div class="container"> </div>    
+    <div class="box red">1</div>
+    <div class="box blue">2</div>
+    <div class="box green">3</div>
+</body>
+</html>

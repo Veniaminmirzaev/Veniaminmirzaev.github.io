@@ -1,0 +1,55 @@
+<h2>1. Форма заявки</h2>
+        <form action="https://example.com/apply" method="POST" target="_blank">
+            <input type="hidden" name="form_type" value="application_form">
+    
+            <fieldset>
+                <legend>Контактная информация</legend>
+    
+               
+                <label for="fio">ФИО:</label><br>
+                <input type="text" id="fio" name="fullname" value="Иван Иванов" maxlength="50" size="30" readonly><br>
+                <small>(поле только для чтения, задано значение по умолчанию)</small><br><br>
+    
+                
+                <label for="secret_code">Кодовое слово:</label><br>
+                <input type="password" id="secret_code" name="code" maxlength="20" size="20"><br><br>
+    
+                <label for="resume">Загрузить резюме (PDF):</label><br>
+                <input type="file" id="resume" name="attachment" accept=".pdf"><br><br>
+    
+                <label>Желаемая должность:</label><br>
+                <input type="radio" id="dev" name="position" value="developer" checked>
+                <label for="dev">Разработчик</label>
+                <input type="radio" id="design" name="position" value="designer">
+                <label for="design">Дизайнер</label>
+                <input type="radio" id="analyst" name="position" value="analyst">
+                <label for="analyst">Аналитик</label><br><br>
+    
+                <label>Дополнительно:</label><br>
+                <input type="checkbox" id="relocate" name="options[]" value="relocation" checked>
+                <label for="relocate">Готов к переезду</label>
+                <input type="checkbox" id="remote" name="options[]" value="remote_work">
+                <label for="remote">Удалённая работа</label>
+            </fieldset>
+    
+            <label for="city">Предпочтительный город:</label><br>
+            <select id="city" name="city" size="3" multiple>
+                <optgroup label="Россия">
+                    <option value="moscow" selected>Москва</option>
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="kazan">Казань</option>
+                </optgroup>
+                <optgroup label="Беларусь">
+                    <option value="minsk">Минск</option>
+                    <option value="brest">Брест</option>
+                </optgroup>
+            </select><br>
+            <small>(множественный выбор, параметр multiple)</small><br><br>
+    
+            <label for="comment">Краткое сопроводительное письмо:</label><br>
+            <textarea id="comment" name="cover_letter" cols="50" rows="4">Расскажите о своём опыте...</textarea><br><br>
+    
+            <input type="submit" value="Отправить заявку">
+            <input type="reset" value="Очистить форму">
+            <input type="button" value="Проверить данные" onclick="alert('Демонстрация командной кнопки.')">
+        </form>

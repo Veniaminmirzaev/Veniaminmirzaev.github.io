@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Фреймы</title>
+</head>
+    <frameset rows="15%,*">
+        <frame name="header" src="data:text/html;charset=utf-8,<html><head><title>Заголовок</title></head><body><h2 align=center>Лабораторная работа №5</h2><p align='center'>Работа с фреймами</p></body></html>" noresize>
+        <frameset cols="50%,*">
+            <frame name="menu" src="data:text/html;charset=utf-8,<html><head><title>Меню</title></head><body><h3>Навигация</h3><a href='info1.html' target='info'>Страница 1 (Главная)</a><br><a href='info2.html' target='info2'>Страница 2 (Детали)</a></body></html>">
+            <frame name="info" src="data:text/html;charset=utf-8,<html><head><title>Информация</title></head><body><h3>Это информационная страница</h3><p>Содержимое</p><a href='info1.html'>Следующая страница</a><br><a href='info2.html'>В конец</a></body></html>">
+        </frameset>
+    </frameset>
+</html>

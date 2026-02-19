@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>дебил об углы бьется</title>
+    <style>
+        .border {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            animation: move 3s infinite linear;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+                background: red;
+            }
+            25% {
+                transform: translate(350px, 0);
+                background: blue;
+            }
+            50% {
+                transform: translate(350px, 350px);
+                background: green;
+            }
+            75% {
+                transform: translate(0, 350px);
+                background: yellow;
+            }
+            100% {
+                transform: translate(0, 0);
+                background: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="border">
+        <div class="square"></div>
+    </div>
+</body>
+</html>

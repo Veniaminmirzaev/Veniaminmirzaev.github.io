@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>пять танцоров</title>
+    <style>
+        .item1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: rotate 3s infinite linear;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .item2 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            animation: scale 2s infinite alternate;
+        }
+        @keyframes scale {
+            from { transform: scale(1); }
+            to { transform: scale(1.5); }
+        }
+
+        .item3 {
+            width: 100px;
+            height: 100px;
+            background: green;
+            animation: skew 2.5s infinite alternate;
+        }
+        @keyframes skew {
+            from { transform: skew(0deg); }
+            to { transform: skew(20deg); }
+        }
+
+        .item4 {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            animation: move 4s infinite alternate;
+        }
+        @keyframes move {
+            from { transform: translateX(0); }
+            to { transform: translateX(50px); }
+        }
+
+        .item5 {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            animation: combo 5s infinite;
+        }
+        @keyframes combo {
+            0% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.5) rotate(180deg); }
+            100% { transform: scale(1) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+    <div class="item4"></div>
+    <div class="item5"></div>
+</body>
+</html>

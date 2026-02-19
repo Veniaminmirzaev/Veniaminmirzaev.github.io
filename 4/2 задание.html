@@ -1,0 +1,52 @@
+<h2> Форма анкеты</h2>
+<form action="https://example.com/survey" method="GET" target="_self">
+    <input type="hidden" name="survey_id" value="2026_02">
+
+    <fieldset>
+        <legend>Личные данные</legend>
+
+     
+        <label for="surname">Фамилия:</label><br>
+        <input type="text" id="surname" name="lastname" value="Петров" maxlength="30" size="25"><br>
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="firstname" value="Пётр" maxlength="30" size="25"><br>
+        
+        <label for="patronymic">Отчество (заполнение недоступно):</label><br>
+        <input type="text" id="patronymic" name="middlename" value="Сергеевич" disabled><br><br>
+    </fieldset>
+
+ 
+    <label>Ваш пол:</label><br>
+    <input type="radio" id="male" name="gender" value="male" checked>
+    <label for="male">Мужской</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Женский</label><br><br>
+
+    
+    <label for="education">Образование:</label><br>
+    <select id="education" name="education">
+        <option value="high">Высшее</option>
+        <option value="incomplete" selected>Неоконченное высшее</option>
+        <option value="secondary">Среднее специальное</option>
+    </select><br><br>
+
+    
+    <label>Ваши увлечения:</label><br>
+    <input type="checkbox" id="hobby1" name="hobbies[]" value="sport" checked>
+    <label for="hobby1">Спорт</label>
+    <input type="checkbox" id="hobby2" name="hobbies[]" value="music">
+    <label for="hobby2">Музыка</label>
+    <input type="checkbox" id="hobby3" name="hobbies[]" value="books" checked>
+    <label for="hobby3">Книги</label><br><br>
+
+   
+    <label for="photo">Загрузить фото:</label>
+    <input type="file" id="photo" name="user_photo" accept="image/*"><br><br>
+
+    
+    <label for="about">О себе:</label><br>
+    <textarea id="about" name="bio" cols="45" rows="3">Краткая информация о себе...</textarea><br><br>
+
+    <input type="submit" value="Отправить анкету">
+    <input type="reset" value="Сбросить">
+</form>
